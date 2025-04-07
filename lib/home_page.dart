@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kb_demo_startup/Theme/CustomTextStyles.dart';
+import 'package:kb_demo_startup/Theme/Spacing.dart';
 import 'package:kb_demo_startup/generated/app_localizations.dart';
 import 'package:kb_demo_startup/routes/route_names.dart';
 
@@ -23,13 +25,20 @@ class MyHomePage extends StatelessWidget {
               onPressed: () {
                 context.pushNamed(RouteNames.flow1_screen1Name);
               },
-              child: Text("go to flow1 first screen..."),
+              child: Text(
+                "go to flow1 first screen...",
+                style: AppTextStyles.accentBodyMedium,
+              ),
             ),
+            SizedBox(height:Spacing.lowMidSpacing),
             ElevatedButton(
               onPressed: () {
                 context.pushNamed(RouteNames.flow2_screen1Name);
               },
-              child: Text("go to flow2 first screen..."),
+              child: Text(
+                "go to flow2 first screen...",
+                style: AppTextStyles.titleSmall,
+              ),
             ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:kb_demo_startup/Theme/Theme.dart';
 import 'package:kb_demo_startup/generated/app_localizations.dart';
 import 'package:kb_demo_startup/routes/route_generator.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final router = AppRouter.returnRouter(false);
-    
+    final isDarkMode = true;
     return MaterialApp.router(  // Changed to MaterialApp.router
       title: 'Flutter Demo',
       // Localization delegates
@@ -31,9 +32,7 @@ class MyApp extends StatelessWidget {
       ],
       // Use device locale
       locale: const Locale('es'),
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: getAppTheme(isDarkMode),
       // Replace home with routerConfig
       routerConfig: router,  // Use the router here
     );
