@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'package:kb_demo_startup/generated/app_localizations.dart';
-import 'package:kb_demo_startup/home_page.dart';
+import 'package:kb_demo_startup/routes/route_generator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final router = AppRouter.returnRouter(false);
+    
+    return MaterialApp.router(  // Changed to MaterialApp.router
       title: 'Flutter Demo',
       // Localization delegates
       localizationsDelegates: const [
@@ -29,11 +30,12 @@ class MyApp extends StatelessWidget {
         // Add other locales as needed
       ],
       // Use device locale
-      locale: null,
+      locale: const Locale('es'),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      // Replace home with routerConfig
+      routerConfig: router,  // Use the router here
     );
   }
 }

@@ -1,6 +1,8 @@
 {
   "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional greeting"
-  }
+  "name": "Ahmed Malash!",
+  "f1s1": "you are in flow 1 first screen",
+  "f1s2": "you are in flow 1 second screen",
+  "f2s1": "you are in flow 2 first screen",
+  "f2s2": "you are in flow 2 second screen"
 }

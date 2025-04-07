@@ -10,4 +10,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get helloWorld => 'Hello World!';
+
+  @override
+  String get name => 'Ahmed Malash!';
+
+  @override
+  String get f1s1 => 'you are in flow 1 first screen';
+
+  @override
+  String get f1s2 => 'you are in flow 1 second screen';
+
+  @override
+  String get f2s1 => 'you are in flow 2 first screen';
+
+  @override
+  String get f2s2 => 'you are in flow 2 second screen';
 }

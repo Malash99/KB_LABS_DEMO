@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
 
 // ignore_for_file: type=lint
 
@@ -90,14 +91,45 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('en')
+    Locale('en'),
+    Locale('es')
   ];
 
-  /// The conventional greeting
+  /// No description provided for @helloWorld.
   ///
   /// In en, this message translates to:
   /// **'Hello World!'**
   String get helloWorld;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Ahmed Malash!'**
+  String get name;
+
+  /// No description provided for @f1s1.
+  ///
+  /// In en, this message translates to:
+  /// **'you are in flow 1 first screen'**
+  String get f1s1;
+
+  /// No description provided for @f1s2.
+  ///
+  /// In en, this message translates to:
+  /// **'you are in flow 1 second screen'**
+  String get f1s2;
+
+  /// No description provided for @f2s1.
+  ///
+  /// In en, this message translates to:
+  /// **'you are in flow 2 first screen'**
+  String get f2s1;
+
+  /// No description provided for @f2s2.
+  ///
+  /// In en, this message translates to:
+  /// **'you are in flow 2 second screen'**
+  String get f2s2;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -109,7 +141,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'es'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -121,6 +153,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
     case 'en': return AppLocalizationsEn();
+    case 'es': return AppLocalizationsEs();
   }
 
   throw FlutterError(
